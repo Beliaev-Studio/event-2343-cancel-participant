@@ -211,7 +211,7 @@ const getParticipant = async function (code, isSandbox) {
     }
   }
 
-  if (!data && !data.id) {
+  if (!data[0] && !data[0].id) {
     logger.error({ message: 'Не найден ID пользователя' })
 
     throw {
